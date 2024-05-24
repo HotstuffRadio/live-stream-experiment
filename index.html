@@ -5,56 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotstuff Radio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #FFFFE0; /* Pale yellow */
-        }
-    </style>
 </head>
 <body>
-    <h1>Welcome to Hotstuff Radio</h1>
-    
-    <div class="radio-players">
-        <div class="player">
-            <iframe width="100%" height="300" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fjane0jane%2F&hide_cover=1&mini=1&light=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    <header>
+        <h1>Welcome to Hotstuff Radio</h1>
+    </header>
+
+    <div class="container">
+        <div class="radio-players">
+            <div class="player">
+                <iframe width="100%" height="300" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fjane0jane%2F&hide_cover=1&mini=1&light=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+            <iframe width="100%" height="300" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fqueerphonie%2Fhottuff-radio-october-04-how%2F" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            <!-- Add more players here if needed -->
         </div>
-        <iframe width="100%" height="300" src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fqueerphonie%2Fhottuff-radio-october-04-how%2F" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-        <!-- Add more players here if needed -->
     </div>
 
-    <script>
-        // JavaScript to connect to the streaming server
-        const serverUrl = "wss://aoo.sonobus.net"; // WebSocket server URL
+    <footer>
+        <p>&copy; 2024 Hotstuff Radio</p>
+    </footer>
 
-        function connectToSonobus() {
-            const socket = new WebSocket(serverUrl);
-
-            socket.onopen = function() {
-                console.log("Connected to the Sonobus server.");
-                // You can send any initial data or perform actions here
-            };
-
-            socket.onmessage = function(event) {
-                console.log("Received data: ", event.data);
-                // Handle the incoming data
-            };
-
-            socket.onclose = function(event) {
-                console.log("Disconnected from the Sonobus server.");
-                if (event.wasClean) {
-                    console.log(`Closed cleanly, code=${event.code} reason=${event.reason}`);
-                } else {
-                    console.error('Connection died');
-                }
-            };
-
-            socket.onerror = function(error) {
-                console.error(`WebSocket error: ${error.message}`);
-            };
-        }
-
-        // Call the function to connect when the page loads
-        window.onload = connectToSonobus;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
