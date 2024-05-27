@@ -1,7 +1,7 @@
 /* styles.css */
 
 body { 
-    background color; FFBF00 
+    background-color: #FFBF00; /* Corrected the background color syntax and added the hex code */
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,8 +11,6 @@ body {
 h1 {
     color: red;
 }
-
-     
 
 p, a, div, span, li, dt, dd {
     color: mintgreen;
@@ -50,4 +48,3 @@ header, footer {
 header h1, footer p {
     margin: 0;
 }
-
