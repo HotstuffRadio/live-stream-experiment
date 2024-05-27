@@ -1,7 +1,7 @@
 /* styles.css */
 
-body {
-    background-color: black;
+body { 
+    background color; FFBF00 
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,8 +11,8 @@ body {
 h1 {
     color: orange;
 }
-body { background color; FFBF00
-     }
+
+     
 
 p, a, div, span, li, dt, dd {
     color: white;
